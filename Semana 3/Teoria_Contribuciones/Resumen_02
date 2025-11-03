@@ -1,0 +1,27 @@
+----MANEJO DE VARIABLES----
+➤ Declaración de variables
+En SQL Server, las variables se declaran con la palabra clave DECLARE y siempre comienzan con @.
+
+EJEMPLO----
+DECLARE @nombre_variable TIPO_DATOS
+DECLARE @nombre NVARCHAR(50)
+DECLARE @edad INT
+
+➤ Asignación de valores
+
+Existen dos formas principales de asignar valores:
+a) Usando SET
+SET @edad = 20
+SET @nombre = 'Romina'
+b) Usando SELECT
+SELECT @edad = 25, @nombre = 'Carlos'
+
+✅ SELECT permite asignar múltiples variables a la vez, mientras que SET se usa comúnmente para una sola variable.
+
+➤ Uso en consultas
+Las variables pueden utilizarse en condiciones, cálculos o cláusulas SQL.
+DECLARE @Ciudad NVARCHAR(50)
+SET @Ciudad = 'Lima'
+SELECT * FROM Clientes
+WHERE Ciudad = @Ciudad
+
